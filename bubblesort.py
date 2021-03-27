@@ -2,6 +2,7 @@ import pygame
 import time
 import drawing
 import random
+import insertionsort
 
 nums = []
 def generate_nums():
@@ -26,7 +27,6 @@ def bubblesort(mainSurface, font):
     generate_nums()
     bool_sorted = False
     index = 0
-    black = pygame.Color(0, 0, 0)
 
     while(bool_sorted == False):
         # Check for events during loop
@@ -36,8 +36,12 @@ def bubblesort(mainSurface, font):
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_1:
                     bubblesort(mainSurface, font)
-        # New surface and refresh color of surface for next blit
-        mainSurface.fill(black)
+                    return 0
+                if event.key == pygame.K_2:
+                    insertionsort.insertion_sort(mainSurface, font)
+                    return 0
+        # Refresh color to clear surface 
+        mainSurface.fill(drawing.black)
 
         drawing.draw_top(mainSurface, 1, font)
 

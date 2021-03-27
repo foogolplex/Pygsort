@@ -21,8 +21,8 @@ def draw_top(mainSurface, index, font):
     elif index == 2:
         insertioncolor = selectedcolor
 
-    UI_1 = font.render('1', True, bubblecolor)
-    UI_2 = font.render('2', True, insertioncolor)
+    UI_1 = font.render('1 - bubble sort', True, bubblecolor)
+    UI_2 = font.render('2 - insertion sort', True, insertioncolor)
 
     mainSurface.blit(UI_1, (20, 20))
-    mainSurface.blit(UI_2, (40, 20))
+    mainSurface.blit(UI_2, (200, 20))

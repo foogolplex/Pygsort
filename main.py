@@ -2,6 +2,7 @@ import pygame
 import time
 import insertionsort
 import bubblesort
+import quicksort
 import drawing
 from pygame.locals import *
 
@@ -19,5 +20,7 @@ def main():
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_1:
                     bubblesort.bubblesort(mainSurface, font)
+                elif event.key == pygame.K_2:
+                    insertionsort.insertion_sort(mainSurface, font)
         pygame.display.flip()
 main()
