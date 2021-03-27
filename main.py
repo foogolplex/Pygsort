@@ -5,12 +5,6 @@ import bubblesort
 import drawing
 from pygame.locals import *
 
-def main_menu(font):
-    pass
-
-def selected_Alg(font, alg_index):
-    pass
-
 def main():
     pygame.init()
 
