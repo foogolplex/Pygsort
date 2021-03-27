@@ -8,6 +8,7 @@ from pygame.locals import *
 
 def main():
     pygame.init()
+    pygame.display.set_caption("algorchan")
 
     alive = True
     font = pygame.font.SysFont(None, 24)
