@@ -1,15 +1,12 @@
 import pygame
 import time
-import insertionsort
-import bubblesort
-import quicksort
-import drawing
+import insertionsort, bubblesort, quicksort, mergesort, drawing
 from pygame.locals import *
 
 def main():
     pygame.init()
     pygame.display.set_caption("algorchan")
-
+    
     alive = True
     font = pygame.font.SysFont(None, 24)
     mainSurface = pygame.display.set_mode((1024, 768))
@@ -22,6 +19,10 @@ def main():
                 if event.key == pygame.K_1:
                     bubblesort.bubblesort(mainSurface, font)
                 elif event.key == pygame.K_2:
-                    insertionsort.insertion_sort(mainSurface, font)
+                    insertionsort.insertionsort(mainSurface, font)
+                elif event.key == pygame.K_3:
+                    mergesort.mergesort(mainSurface, font)
+                elif event.key == pygame.K_4:
+                    quicksort.quicksort(mainSurface, font)
         pygame.display.flip()
 main()

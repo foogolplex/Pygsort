@@ -1,6 +1,6 @@
 import random
 import time
-import insertionsort, bubblesort, mergesort, drawing
+import insertionsort, bubblesort, quicksort, drawing
 import pygame
 
 def generate_nums():
@@ -14,7 +14,7 @@ def is_sorted(nums):
                 return False
     return True
 
-def quicksort(mainSurface, font):
+def mergesort(mainSurface, font):
     sorted_flag = False
     while(sorted_flag == False):
         # Check for events during loop
@@ -29,10 +29,10 @@ def quicksort(mainSurface, font):
                         insertionsort.insertionsort(mainSurface, font)
                         return 0
                     elif event.key == pygame.K_3:
-                        mergesort.mergesort(mainSurface, font)
+                        mergesort(mainSurface, font)
                         return 0
                     elif event.key == pygame.K_4:
-                        quicksort(mainSurface, font)
+                        quicksort.quicksort(mainSurface, font)
                         return 0
-        drawing.draw_top(mainSurface, 4, font)
+        drawing.draw_top(mainSurface, 3, font)
         pygame.display.flip()

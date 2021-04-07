@@ -1,8 +1,7 @@
 import pygame
 import time
-import drawing
+import bubblesort, mergesort, quicksort, drawing
 import random
-import bubblesort
 
 nums = []
 def generate_nums():
@@ -16,7 +15,7 @@ def is_sorted(nums):
                 return False
     return True
 
-def insertion_sort(mainSurface, font):
+def insertionsort(mainSurface, font):
     i = 1
     sorted_flag = False
 
@@ -32,8 +31,14 @@ def insertion_sort(mainSurface, font):
                 if event.key == pygame.K_1:
                     bubblesort.bubblesort(mainSurface, font)
                     return 0
-                if event.key == pygame.K_2:
-                    insertion_sort(mainSurface, font)
+                elif event.key == pygame.K_2:
+                    insertionsort(mainSurface, font)
+                    return 0
+                elif event.key == pygame.K_3:
+                    mergesort.mergesort(mainSurface, font)
+                    return 0
+                elif event.key == pygame.K_4:
+                    quicksort.quicksort(mainSurface, font)
                     return 0
 
         # Refresh color to clear surface
