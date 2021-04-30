@@ -1,7 +1,7 @@
-# algorchan
-
-super basic sorting visualizer in an attempt to force myself to learn sorting algorithms and other algorithms
-
-dependencies: python3, pygame
-
-clone the repo and run python main.py or python3 main.py
+# Dependencies
+1. python3 and pip
+2. `pip install pygame`
+# Installation
+`cd ./Your/Download/Location/ && git clone https://github.com/foogolplex/algorchan.git`
+# Usage
+`python3 main.py`
