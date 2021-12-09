@@ -10,8 +10,8 @@ def main():
     alive = True
     font = pygame.font.SysFont(None, 24)
     mainSurface = pygame.display.set_mode((1024, 768))
-    while(alive == True):
-        drawing.draw_top(mainSurface, 0, font)
+    drawing.draw_top(mainSurface, 0, font) 
+    while(alive == True): 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 raise SystemExit
